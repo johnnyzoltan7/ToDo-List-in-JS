@@ -9,3 +9,11 @@ ToDo List:
 
 Use GitHub to practice collaborating in a team on Github
 
+File Structure:
+
+	*** custom CSS 		-> /css
+	*** custom JS  		-> /js
+	*** custom images	-> /img
+	*** bootstrap  		-> /bootstrap
+
+
