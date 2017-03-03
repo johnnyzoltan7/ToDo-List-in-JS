@@ -1,0 +1,2 @@
+same here, add your custom JS and we can export it to a 'master' file
+or we can append into an existing JS file
