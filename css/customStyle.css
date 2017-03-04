@@ -1,0 +1,44 @@
+/* Custom CSS */
+
+body {
+	background-image: url('..\\img\\notebookBG.png');
+	background-size: 100% 360%;
+	background-repeat: no-repeat;
+}
+
+#wrapper {
+	width:100%;
+	margin: 0;	
+	position: relative;
+}
+
+#title {
+	width: 340px;
+	height: 200px;
+	float: left;
+	padding: 10px;
+	/*position: relative;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: 40px;	*/
+}
+
+div.date {
+	width: 14%;
+	margin-top: 13%; /*145%*/
+	padding-right: 20px;
+	padding-bottom: 2px;
+	float: right;
+	text-align: right;
+	font-size: 10px;
+}
+p.date {
+	padding-right: 20px;
+	text-align: right;
+	font-size: 10px;
+}
+
+
+.clearBoth {
+	clear: both;
+}

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 <!--     <link rel="icon" href="../../favicon.ico"> -->
-    <title>Starter Template for Bootstrap</title>
+    <title>To-Do List</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,10 +18,13 @@
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
-
+	
+	<!-- Daniel added style sheet -->
+	<link rel="stylesheet" href="css\customStyle.css">
+	
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- <script src="./bootstrap/assets/js/ie-emulation-modes-warning.js"></script> COMMENTED BY DANIEL-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -34,7 +37,23 @@
 
   <!-- Daniel component =================================================================-->
   <!--  ** you can alter (it uses a few bootstrap classes) or you can scrap and make a new component-->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+  	<header>
+		<div id="wrapper">
+		<!--	<h1 id="title">What To-Do List</h1> -->
+			<img id="title" src="img\Todo.png" alt="ToDo List">
+			
+			
+			<!-- TIME -->
+			<div class="date">
+				Date Accessed:
+				<p class="date">DATE</p>
+			</div>
+		</div>
+		
+	</header>
+  
+  
+    <nav class="clearBoth navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
