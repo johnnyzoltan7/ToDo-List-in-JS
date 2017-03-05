@@ -42,3 +42,9 @@ p.date {
 .clearBoth {
 	clear: both;
 }
+
+.navContainer {
+	width: 280px;
+	margin-left: 0px;
+	float: right;
+}
