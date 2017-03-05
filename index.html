@@ -17,11 +17,15 @@
     <link href="./bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+
     <!--<link href="starter-template.css" rel="stylesheet"> -->
 	
 	<!-- Daniel added style sheet -->
 	<link rel="stylesheet" href="css\todo-style.css">
-	
+	<link rel="stylesheet" href="css\customStyle.css">
+
+    <link href="./css/todo-style.css" rel="stylesheet">
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- <script src="./bootstrap/assets/js/ie-emulation-modes-warning.js"></script> COMMENTED BY DANIEL-->
@@ -60,6 +64,20 @@
       <div class="col-md-6 col-lg-6 col-sm-6" style="text-align: left;">
         <div class="button-group">
           <span><p>Sort By:</p></span>
+          <button type="button" class="btn btn-default" id="btn-date">Date</button>
+          <button type="button" class="btn btn-success" id="btn-completed">Completed</button>
+          <button type="button" class="btn btn-warning" id="btn-incomplete">Incomplete</button>
+        </div>
+      </div><!-- /.col -->
+
+  <!-- John component =================================================================-->
+  <!-- ** I will make a sticky component that will stay fixed below navbar/title component--> 
+  <div class="container add-component"> 
+    <div class="row section">
+      
+      <div class="col-md-6 col-lg-6 col-sm-6" style="text-align: left;">
+        <div class="button-group">
+          <span><h4>Sort By:</h4></span>
           <button type="button" class="btn btn-default" id="btn-date">Date</button>
           <button type="button" class="btn btn-success" id="btn-completed">Completed</button>
           <button type="button" class="btn btn-warning" id="btn-incomplete">Incomplete</button>

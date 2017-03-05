@@ -48,4 +48,14 @@ p.date {
 	width: 100%;
 	margin-left: 0px;
 	float: right;
+
+.add-component {
+	padding-top: 40px;
+	text-align: center;
+}
+
+.section {
+	margin-bottom: 40px;
+	padding: 20px;
+	background-color: #afafaf;
 }
