@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 <!--     <link rel="icon" href="../../favicon.ico"> -->
-    <title>Starter Template for Bootstrap</title>
+    <title>To-Do List</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,11 +17,18 @@
     <link href="./bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+
+    <!--<link href="starter-template.css" rel="stylesheet"> -->
+	
+	<!-- Daniel added style sheet -->
+	<link rel="stylesheet" href="css\todo-style.css">
+	<link rel="stylesheet" href="css\customStyle.css">
+
     <link href="./css/todo-style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- <script src="./bootstrap/assets/js/ie-emulation-modes-warning.js"></script> COMMENTED BY DANIEL-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -34,26 +41,34 @@
 
   <!-- Daniel component =================================================================-->
   <!--  ** you can alter (it uses a few bootstrap classes) or you can scrap and make a new component-->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
+  	<header>
+		<div id="wrapper">
+		<!--	<h1 id="title">What To-Do List</h1> -->
+			<img id="title" src="img\Todo.png" alt="ToDo List">
+			
+			<!-- TIME -->
+			<div class="date">
+				Date Accessed:
+				<p id="inDate" class="date">DATE</p>
+			</div>
+		</div>
+		
+	</header>
+  
+  
+    <nav class="clearBoth navbar navbar-inverse">
+      <div class="navContainer">
+	<div class="container add-component"> 
+    <div class="row section">
+      
+      <div class="col-md-6 col-lg-6 col-sm-6" style="text-align: left;">
+        <div class="button-group">
+          <span><p>Sort By:</p></span>
+          <button type="button" class="btn btn-default" id="btn-date">Date</button>
+          <button type="button" class="btn btn-success" id="btn-completed">Completed</button>
+          <button type="button" class="btn btn-warning" id="btn-incomplete">Incomplete</button>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+      </div><!-- /.col -->
 
   <!-- John component =================================================================-->
   <!-- ** I will make a sticky component that will stay fixed below navbar/title component--> 
@@ -80,7 +95,14 @@
 
     </div><!-- /.row -->
   </div><!-- /.add-component -->
+<<<<<<< HEAD
   
+=======
+
+      </div>
+    </nav>
+
+>>>>>>> refs/remotes/origin/master
   <!-- Aaron component =================================================================-->
         <div class="listContainer">
             <table style="width:100%">
@@ -126,5 +148,6 @@
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js\customScript.js"></script>
   </body>
 </html>
