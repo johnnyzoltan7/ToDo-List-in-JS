@@ -1,0 +1,61 @@
+/* Custom CSS */
+
+body {
+	background-image: url('..\\img\\notebookBG.png');
+	background-size: 100% 360%;
+	background-repeat: no-repeat;
+}
+
+#wrapper {
+	width:100%;
+	margin: 0;	
+	position: relative;
+}
+
+#title {
+	width: 340px;
+	height: 200px;
+	float: left;
+	padding: 2px;
+	margin-left: 11.7%;
+	/*position: relative;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: 40px;	*/
+}
+
+div.date {
+	width: 14%;
+	margin-top: 154px; /*145%*/
+	padding-right: 20px;
+	padding-bottom: 2px;
+	float: right;
+	text-align: right;
+	font-size: 12px;
+}
+p.date {
+	padding-right: 20px;
+	text-align: right;
+	font-size: 12px;
+}
+
+
+.clearBoth {
+	clear: both;
+}
+
+.navContainer {
+	width: 100%;
+	margin-left: 0px;
+	float: right;
+
+.add-component {
+	padding-top: 40px;
+	text-align: center;
+}
+
+.section {
+	margin-bottom: 40px;
+	padding: 20px;
+	background-color: #afafaf;
+}
