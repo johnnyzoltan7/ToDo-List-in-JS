@@ -7,12 +7,10 @@
 
 .listContainer{
     /*width: 1000px;*/
-    
     padding-bottom: 50px;
     padding-top: 55px;
     margin-left: 40px;
     margin-right: 40px;
-    background-image: url("padTexture.jpg");
 }
 
 table, th, td {
