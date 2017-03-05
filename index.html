@@ -20,7 +20,7 @@
     <!--<link href="starter-template.css" rel="stylesheet"> -->
 	
 	<!-- Daniel added style sheet -->
-	<link rel="stylesheet" href="css\customStyle.css">
+	<link rel="stylesheet" href="css\todo-style.css">
 	
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -54,32 +54,12 @@
   
     <nav class="clearBoth navbar navbar-inverse">
       <div class="navContainer">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-  <!-- John component =================================================================-->
-  <!-- ** I will make a sticky component that will stay fixed below navbar/title component--> 
-  <div class="container add-component"> 
+	<div class="container add-component"> 
     <div class="row section">
       
       <div class="col-md-6 col-lg-6 col-sm-6" style="text-align: left;">
         <div class="button-group">
-          <span><h4>Sort By:</h4></span>
+          <span><p>Sort By:</p></span>
           <button type="button" class="btn btn-default" id="btn-date">Date</button>
           <button type="button" class="btn btn-success" id="btn-completed">Completed</button>
           <button type="button" class="btn btn-warning" id="btn-incomplete">Incomplete</button>
@@ -97,6 +77,9 @@
 
     </div><!-- /.row -->
   </div><!-- /.add-component -->
+
+      </div>
+    </nav>
 
   <!-- Aaron component =================================================================-->
     <div class="container">

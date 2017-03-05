@@ -45,7 +45,7 @@ p.date {
 }
 
 .navContainer {
-	width: 280px;
+	width: 100%;
 	margin-left: 0px;
 	float: right;
 }
