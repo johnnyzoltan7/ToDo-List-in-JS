@@ -26,7 +26,7 @@ body {
 
 div.date {
 	width: 14%;
-	margin-top: 154px; /*145%*/
+	margin-top: 185px; /*145%*/
 	padding-right: 20px;
 	padding-bottom: 2px;
 	float: right;
@@ -49,13 +49,22 @@ p.date {
 	margin-left: 0px;
 	float: right;
 
-.add-component {
-	padding-top: 40px;
-	text-align: center;
 }
+.row {
+		padding-top: 5px;
+		padding-bottom: 5px;
+}
+#sortByText {
+	position: relative;
+	margin-top: 8px;
+	width: 12%;
+	float: left;
+}
+#buttonGroup {
 
-.section {
-	margin-bottom: 40px;
-	padding: 20px;
-	background-color: #afafaf;
+}
+#sortByText p {
+	color: white;
+	margin: 0px;
+	font-weight: 600; 
 }
