@@ -2,8 +2,7 @@ let taskId = 0;
 
 window.onload = function() {
 	let date = new Date();
-	document.getElementById("inDate").textContent = date.getMonth() + "-" + date.getDate() + "-" + date.getFullYear();
-	
+	document.getElementById("inDate").textContent = date.getMonth() + "-" + date.getDate() + "-" + date.getFullYear();	
 }
 
 function add() {
@@ -23,7 +22,6 @@ function add() {
 	//Get styles and types for each element
 	inpNode.type = "checkbox";
 	inpNode.id = "checkBox_" + taskId;
-	//inpNode.setAttribute('onclick', 'taskDone(' + inpNode.id + ')');
 	inpNode.onclick = function() { taskDone(inpNode.id); };
 	delButton.id = "delButton_" + taskId;
 	delButton.type = "button";
