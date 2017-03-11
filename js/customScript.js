@@ -7,7 +7,6 @@ window.onload = function() {
 }
 
 function add() {
-	//let userInput = getElementById().textContent;
 	//Get table elements
 	let taskTable = document.getElementById("taskTable");
 	let taskInput = document.getElementById("taskInput");	
@@ -24,6 +23,8 @@ function add() {
 	//Get styles and types for each element
 	inpNode.type = "checkbox";
 	inpNode.id = "checkBox_" + taskId;
+	//inpNode.setAttribute('onclick', 'taskDone(' + inpNode.id + ')');
+	inpNode.onclick = function() { taskDone(inpNode.id); };
 	delButton.id = "delButton_" + taskId;
 	delButton.type = "button";
 	column2.id = "text_" + taskId;
@@ -37,10 +38,18 @@ function add() {
 	row.appendChild(column2);
 	row.appendChild(column3);
 	taskTable.appendChild(row);
+	
+	//clear input text box
+	taskInput.value = "";
 }
 
 function taskDone(id){
-	let done = document.getElementById(id);
+	let checkElement = document.getElementById(id);
+	let textElement = document.getElementById("text_" + id.split("_")[1]);
 	
-	
+	if(checkElement.checked){
+		textElement.style = "text-decoration: line-through";
+	}else{
+		textElement.style = "text-decoration: none";
+	}	
 }
