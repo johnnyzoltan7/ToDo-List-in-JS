@@ -2,7 +2,7 @@ let taskId = 0;
 
 window.onload = function() {
 	let date = new Date();
-	document.getElementById("inDate").textContent = date.getMonth() + "-" + date.getDate() + "-" + date.getFullYear();	
+	document.getElementById("inDate").textContent = date.getMonth()+1 + "-" + date.getDate() + "-" + date.getFullYear();	
 }
 
 function add() {
@@ -32,6 +32,7 @@ function add() {
 	delButton.id = "delButton_" + taskId;
 	delButton.type = "button";
 	delButton.onclick = function(){taskDelete(row.id);};// for row delete
+	delButton.className += "btn btn-default"
 	column2.id = "text_" + taskId;
 	
 	//Start attaching each element from bottom up
