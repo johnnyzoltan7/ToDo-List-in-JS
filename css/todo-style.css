@@ -24,3 +24,7 @@ table, th, td {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+th #checked {
+    text-decoration: line-through;
+}

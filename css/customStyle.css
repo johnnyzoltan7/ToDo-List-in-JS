@@ -69,3 +69,7 @@ span.date {
 	margin: 0px;
 	font-weight: 600; 
 }
+
+th #checked {
+    text-decoration: line-through;
+}

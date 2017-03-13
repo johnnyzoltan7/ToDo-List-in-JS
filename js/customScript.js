@@ -6,6 +6,12 @@ window.onload = function() {
 }
 
 function add() {
+
+	if (taskInput.value == "") {
+		//don't add a blank note
+	}
+	else{
+		taskId = taskId + 1;
 	//Get table elements
 	let taskTable = document.getElementById("taskTable");
 	let taskInput = document.getElementById("taskInput");	
@@ -18,13 +24,14 @@ function add() {
 	let deleteText = document.createTextNode("delete");
 	let inpNode = document.createElement("input");
 	
-	taskId = taskId + 1;
 	//Get styles and types for each element
+	row.id = "row_" + taskId;// for row delete
 	inpNode.type = "checkbox";
 	inpNode.id = "checkBox_" + taskId;
 	inpNode.onclick = function() { taskDone(inpNode.id); };
 	delButton.id = "delButton_" + taskId;
 	delButton.type = "button";
+	delButton.onclick = function(){taskDelete(row.id);};// for row delete
 	column2.id = "text_" + taskId;
 	
 	//Start attaching each element from bottom up
@@ -38,7 +45,9 @@ function add() {
 	taskTable.appendChild(row);
 	
 	//clear input text box
-	taskInput.value = "";
+	taskInput.value = "";	
+	}
+	
 }
 
 function taskDone(id){
@@ -50,4 +59,9 @@ function taskDone(id){
 	}else{
 		textElement.style = "text-decoration: none";
 	}	
+}
+
+function taskDelete(id) {
+	let row = document.getElementById(id);
+	row.parentNode.removeChild(row);
 }
