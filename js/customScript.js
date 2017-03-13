@@ -65,3 +65,78 @@ function taskDelete(id) {
 	let row = document.getElementById(id);
 	row.parentNode.removeChild(row);
 }
+
+function sortCompleted() {
+	var tbl, rows, i, j, k, done;
+	tbl = document.getElementById('taskTable'); 
+	done = false;
+	rows = tbl.getElementsByTagName('TR');
+	j = -1;
+	k = rows.length-1;
+	while(!done) {
+		done = true;
+		for(i = k; i > j; i--) {
+			if( document.getElementById("checkBox_"+rows[i].id.split("_")[1]).checked ) {
+				done = false;
+				break;
+			}
+			else {
+				k--;
+			}
+		}
+		if(!done) {
+			rows[i].parentNode.insertBefore(rows[i],rows[0]);
+			j++;
+		}
+
+	}
+}
+
+function sortIncompleted() {
+	var tbl, rows, i, j, k, done;
+	tbl = document.getElementById('taskTable'); 
+	done = false;
+	rows = tbl.getElementsByTagName('TR');
+	j = -1;
+	k = rows.length-1;
+	while(!done) {
+		done = true;
+		for(i = k; i > j; i--) {
+			if( !document.getElementById("checkBox_"+rows[i].id.split("_")[1]).checked ) {
+				done = false;
+				break;
+			}
+			else {
+				k--;
+			}
+		}
+		if(!done) {
+			rows[i].parentNode.insertBefore(rows[i],rows[0]);
+			j++;
+		}
+
+	}
+}
+
+function sortDate() {
+	var tbl, rows, i, j, k, done, switching;
+	tbl = document.getElementById('taskTable'); 
+	done = false;
+	while(!done) {
+		done = true;
+		rows = tbl.getElementsByTagName('TR');
+		for(i = 0; i < rows.length-1; i++) {
+			j = rows[i].id;
+			k = rows[i+1].id;
+			if( j > k ) {
+				done = false;
+				break;
+			}
+		}
+		if(!done) {
+			rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
+			j++;
+		}
+
+	}
+}
