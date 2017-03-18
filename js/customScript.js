@@ -2,10 +2,16 @@ let taskId = 0;
 
 window.onload = function() {
 	let date = new Date();
-	document.getElementById("inDate").textContent = date.getMonth() + "-" + date.getDate() + "-" + date.getFullYear();	
+	document.getElementById("inDate").textContent = date.getMonth()+1 + "-" + date.getDate() + "-" + date.getFullYear();	
 }
 
 function add() {
+
+	if (taskInput.value == "") {
+		//don't add a blank note
+	}
+	else{
+		taskId = taskId + 1;
 	//Get table elements
 	let taskTable = document.getElementById("taskTable");
 	let taskInput = document.getElementById("taskInput");	
@@ -18,13 +24,15 @@ function add() {
 	let deleteText = document.createTextNode("delete");
 	let inpNode = document.createElement("input");
 	
-	taskId = taskId + 1;
 	//Get styles and types for each element
+	row.id = "row_" + taskId;// for row delete
 	inpNode.type = "checkbox";
 	inpNode.id = "checkBox_" + taskId;
 	inpNode.onclick = function() { taskDone(inpNode.id); };
 	delButton.id = "delButton_" + taskId;
 	delButton.type = "button";
+	delButton.onclick = function(){taskDelete(row.id);};// for row delete
+	delButton.className += "btn btn-default"
 	column2.id = "text_" + taskId;
 	
 	//Start attaching each element from bottom up
@@ -38,7 +46,9 @@ function add() {
 	taskTable.appendChild(row);
 	
 	//clear input text box
-	taskInput.value = "";
+	taskInput.value = "";	
+	}
+	
 }
 
 function taskDone(id){
@@ -50,4 +60,84 @@ function taskDone(id){
 	}else{
 		textElement.style = "text-decoration: none";
 	}	
+}
+
+function taskDelete(id) {
+	let row = document.getElementById(id);
+	row.parentNode.removeChild(row);
+}
+
+function sortCompleted() {
+	var tbl, rows, i, j, k, done;
+	tbl = document.getElementById('taskTable'); 
+	done = false;
+	rows = tbl.getElementsByTagName('TR');
+	j = -1;
+	k = rows.length-1;
+	while(!done) {
+		done = true;
+		for(i = k; i > j; i--) {
+			if( document.getElementById("checkBox_"+rows[i].id.split("_")[1]).checked ) {
+				done = false;
+				break;
+			}
+			else {
+				k--;
+			}
+		}
+		if(!done) {
+			rows[i].parentNode.insertBefore(rows[i],rows[0]);
+			j++;
+		}
+
+	}
+}
+
+function sortIncompleted() {
+	var tbl, rows, i, j, k, done;
+	tbl = document.getElementById('taskTable'); 
+	done = false;
+	rows = tbl.getElementsByTagName('TR');
+	j = -1;
+	k = rows.length-1;
+	while(!done) {
+		done = true;
+		for(i = k; i > j; i--) {
+			if( !document.getElementById("checkBox_"+rows[i].id.split("_")[1]).checked ) {
+				done = false;
+				break;
+			}
+			else {
+				k--;
+			}
+		}
+		if(!done) {
+			rows[i].parentNode.insertBefore(rows[i],rows[0]);
+			j++;
+		}
+
+	}
+}
+
+function sortDate() {
+	var tbl, rows, i, j, k, done, switching;
+	tbl = document.getElementById('taskTable'); 
+	done = false;
+	while(!done) {
+		done = true;
+		rows = tbl.getElementsByTagName('TR');
+		for(i = 0; i < rows.length-1; i++) {
+			j = rows[i].id;
+			k = rows[i+1].id;
+			if( j > k ) {
+				done = false;
+				break;
+			}
+		}
+		if(!done) {
+			rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
+			j++;
+		}
+
+	}
 }

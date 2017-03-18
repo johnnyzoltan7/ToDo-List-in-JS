@@ -15,10 +15,6 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="./bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-
-    <!--<link href="starter-template.css" rel="stylesheet"> -->
 	
 	<!-- Daniel added style sheet -->
 	<link rel="stylesheet" href="css\customStyle.css">
@@ -62,9 +58,9 @@
 					<div class="col-md-6 col-lg-6 col-sm-6" style="text-align: left;">
 						<div id="buttonGroup" class="button-group">
 							<div id="sortByText"><p>Sort By:</p></div>
-							<button type="button" class="btn btn-default" id="btn-date">Date</button>
-							<button type="button" class="btn btn-success" id="btn-completed">Completed</button>
-							<button type="button" class="btn btn-warning" id="btn-incomplete">Incomplete</button>
+							<button type="button" class="btn btn-default" id="btn-date" onclick="sortDate()">Date</button>
+							<button type="button" class="btn btn-success" id="btn-completed" onclick="sortCompleted()">Completed</button>
+							<button type="button" class="btn btn-warning" id="btn-incomplete" onclick="sortIncompleted()">Incomplete</button>
 						</div>
 					</div><!-- /.col -->
 					<div class="col-md-6 col-lg-6 col-sm-6">
@@ -84,11 +80,6 @@
   <!-- Aaron component =================================================================-->
         <div class="listContainer">
             <table id="taskTable" style="width:100%">
-                <tr>
-                    <th><input type="checkbox" id="dataItem9" data-time="7:00" data-done="false"></th>
-                    <th>Go to class</th> 
-                    <th><button type="button">delete</button></th>
-                </tr>
             </table>
         </div><!-- /.container -->
 
